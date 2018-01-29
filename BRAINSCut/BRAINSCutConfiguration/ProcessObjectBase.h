@@ -59,7 +59,7 @@ public:
   {
   }
 
-  virtual bool Verify() const = 0;
+  virtual bool Verify() constexpr  = 0;
 
   std::string PrintSpaces(const int howmany) const
   {
@@ -72,7 +72,7 @@ public:
     return spaces;
   }
 
-  virtual int PrintSelf(std::ostream & os, int indent) const = 0;
+  virtual int PrintSelf(std::ostream & os, int indent) constexpr  = 0;
 
   const std::string & GetName() const
   {
@@ -116,7 +116,7 @@ public:
   {
   }
 
-  virtual OutputType GetValue(void) const = 0;
+  virtual OutputType GetValue(void) constexpr  = 0;
 };
 
 #endif // ProcessObjectBase_H
